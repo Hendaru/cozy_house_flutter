@@ -7,20 +7,22 @@ ThemeData lightThemeData(BuildContext context) {
     primaryColor: kPrimaryColor,
     scaffoldBackgroundColor: Colors.white,
     appBarTheme: appBarTheme,
-    iconTheme: const IconThemeData(color: kContentColorLightTheme),
-    textTheme: GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme)
-        .apply(bodyColor: kContentColorLightTheme),
-    colorScheme: const ColorScheme.light(
-      primary: kPrimaryColor,
-      secondary: kSecondaryColor,
-      error: kErrorColor,
+    iconTheme: const IconThemeData(color: kContentColorLightheme),
+    textTheme: GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme).apply(
+      bodyColor: textPrimaryColorLightTheme,
     ),
-    bottomNavigationBarTheme: BottomNavigationBarThemeData(
-      backgroundColor: Colors.white,
-      selectedItemColor: kContentColorLightTheme.withOpacity(0.7),
-      unselectedItemColor: kContentColorLightTheme.withOpacity(0.32),
-      selectedIconTheme: const IconThemeData(color: kPrimaryColor),
-      showUnselectedLabels: true,
+    colorScheme: const ColorScheme.light(
+        primary: kPrimaryColor,
+        secondary: kSecondaryColor,
+        error: kErrorColor,
+        onPrimary: textPrimaryColorLightTheme,
+        onPrimaryContainer: kBGContainerLightColor),
+    pageTransitionsTheme: const PageTransitionsTheme(
+      builders: <TargetPlatform, PageTransitionsBuilder>{
+        TargetPlatform.android: OpenUpwardsPageTransitionsBuilder(),
+        TargetPlatform.linux: OpenUpwardsPageTransitionsBuilder(),
+        TargetPlatform.iOS: CupertinoPageTransitionsBuilder(),
+      },
     ),
   );
 }
@@ -29,25 +31,25 @@ ThemeData darkThemeData(BuildContext context) {
   // Bydefault flutter provie us light and dark theme
   // we just modify it as our need
   return ThemeData.dark().copyWith(
-    primaryColor: kPrimaryColor,
-    scaffoldBackgroundColor: kContentColorLightTheme,
-    appBarTheme: appBarTheme,
-    iconTheme: const IconThemeData(color: kContentColorDarkTheme),
-    textTheme: GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme)
-        .apply(bodyColor: kContentColorDarkTheme),
-    colorScheme: const ColorScheme.dark().copyWith(
-      primary: kPrimaryColor,
-      secondary: kSecondaryColor,
-      error: kErrorColor,
-    ),
-    bottomNavigationBarTheme: BottomNavigationBarThemeData(
-      backgroundColor: kContentColorLightTheme,
-      selectedItemColor: Colors.white70,
-      unselectedItemColor: kContentColorDarkTheme.withOpacity(0.32),
-      selectedIconTheme: const IconThemeData(color: kPrimaryColor),
-      showUnselectedLabels: true,
-    ),
-  );
+      primaryColor: kPrimaryColor,
+      scaffoldBackgroundColor: kContentColorDarkTheme,
+      appBarTheme: appBarTheme,
+      iconTheme: const IconThemeData(color: kContentColorDarkTheme),
+      textTheme: GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme)
+          .apply(bodyColor: textPrimaryColorDarkTheme),
+      colorScheme: const ColorScheme.dark().copyWith(
+          primary: kPrimaryColor,
+          secondary: kSecondaryColor,
+          onPrimaryContainer: kBGContainerDarkColor,
+          error: kErrorColor,
+          onPrimary: textPrimaryColorDarkTheme),
+      pageTransitionsTheme: const PageTransitionsTheme(
+        builders: <TargetPlatform, PageTransitionsBuilder>{
+          TargetPlatform.android: OpenUpwardsPageTransitionsBuilder(),
+          TargetPlatform.linux: OpenUpwardsPageTransitionsBuilder(),
+          TargetPlatform.iOS: CupertinoPageTransitionsBuilder(),
+        },
+      ));
 }
 
 const appBarTheme = AppBarTheme(centerTitle: false, elevation: 0);

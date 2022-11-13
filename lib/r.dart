@@ -3,8 +3,6 @@
 class MainAssets {
   static const package = 'cozy_house';
 
-  static const Icon_love_solid = 'assets/Icon_love_solid.svg';
-
   static const splash_home = 'assets/splash_home.png';
 
   static const btn_wishlist = 'assets/btn_wishlist.svg';
@@ -17,25 +15,41 @@ class MainAssets {
 
   static const ic_kitchen = 'assets/ic_kitchen.svg';
 
-  static const Icon_love = 'assets/Icon_love.svg';
-
-  static const Icon_mail = 'assets/Icon_mail.svg';
-
-  static const Icon_card_solid = 'assets/Icon_card_solid.svg';
-
-  static const Icon_card = 'assets/Icon_card.svg';
-
   static const ic_lemari = 'assets/ic_lemari.svg';
-
-  static const Icon_home = 'assets/Icon_home.svg';
-
-  static const Icon_mail_solid = 'assets/Icon_mail_solid.svg';
 
   static const logo = 'assets/logo.svg';
 
   static const ic_mark = 'assets/ic_mark.svg';
 
-  static const Icon_home_solid = 'assets/Icon_home_solid.svg';
+  static const ic_mail = 'assets/ic_mail.svg';
+
+  static const ic_card = 'assets/ic_card.svg';
+
+  static const ic_home = 'assets/ic_home.svg';
+
+  static const ic_love = 'assets/ic_love.svg';
+
+  static const bandung = 'assets/bandung.jpg';
+
+  static const guidance = 'assets/guidance.svg';
+
+  static const jakarta = 'assets/jakarta.jpg';
+
+  static const surabaya = 'assets/surabaya.jpg';
+
+  static const guidance1 = 'assets/guidance1.svg';
+
+  static const r_4 = 'assets/4.jpg';
+
+  static const r_5 = 'assets/5.jpg';
+
+  static const r_6 = 'assets/6.jpg';
+
+  static const r_2 = 'assets/2.jpg';
+
+  static const r_3 = 'assets/3.jpg';
+
+  static const r_1 = 'assets/1.jpg';
 
 // ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,lines_longer_than_80_chars,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,public_member_api_docs,constant_identifier_names,prefer_double_quotes
 }

@@ -1,3 +1,4 @@
+import 'package:cozy_house/modules/dasboard/pages/dasboard_page.dart';
 import 'package:cozy_house/r.dart';
 import 'package:cozy_house/utils/app_constan.dart';
 import 'package:cozy_house/utils/extension/double_extensions.dart';
@@ -35,17 +36,23 @@ class _SplashPageState extends State<SplashPage> {
                 3.h.height,
                 Text(
                   "Find Cozy House to Stay and Happy",
-                  style: primaryTextStyle(size: 23.sp),
+                  style: boldTextStyle(
+                    size: 23.sp,
+                  ),
                 ),
                 3.h.height,
                 Text(
                   "Stop membuang banyak waktu pada tempat yang tidak habitable",
-                  style: secondaryTextStyle(size: 14.sp),
+                  style: secondaryTextStyle(
+                    size: 16.sp,
+                  ),
                 ),
                 5.h.height,
                 PrimaryButton(
                   text: "Explore Now",
-                  press: () {},
+                  press: () {
+                    const DasboardPage().launch(context, isNewTask: true);
+                  },
                   minWidth: 50.w,
                 ),
                 2.h.height,

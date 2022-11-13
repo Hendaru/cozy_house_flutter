@@ -19,7 +19,9 @@ TextStyle boldTextStyle({
 }) {
   return TextStyle(
     fontSize: size != null ? size.toDouble() : textBoldSizeGlobal,
-    color: color ?? textPrimaryColorGlobal,
+    color: color
+    //?? textPrimaryColorGlobal,
+    ,
     fontWeight: weight ?? fontWeightBoldGlobal,
     fontFamily: fontFamily ?? fontFamilyBoldGlobal,
     letterSpacing: letterSpacing,
@@ -52,7 +54,9 @@ TextStyle primaryTextStyle({
 }) {
   return TextStyle(
     fontSize: size != null ? size.toDouble() : textPrimarySizeGlobal,
-    // color: color ?? textPrimaryColorGlobal,
+    color: color
+    //?? textPrimaryColorGlobal,
+    ,
     fontWeight: weight ?? fontWeightPrimaryGlobal,
     fontFamily: fontFamily ?? fontFamilyPrimaryGlobal,
     letterSpacing: letterSpacing,
